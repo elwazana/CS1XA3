@@ -20,8 +20,8 @@ General Additional Features are additional features that improve the general qua
 1. Looping Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
 
-2. Execution till exit
+2. Execution till exit:
 	This feature allows the suer to run any combiniation of commands without needing to re-execute the script. when prompted to "Enter command: " the user my enter exit to quit the script.
 
-3. Open File
+3. Open File:
 	Any feature that results in the creation/appending of a file will prompt the user "Do you wich to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
