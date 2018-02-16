@@ -6,16 +6,17 @@ Executing the program will result in a prompt appearing that will request a comm
 Additional Features will describe any entirely new features implemented by the creator.
 
 General Additional Features are additional features that improve the general quality of the entire script.
-## Project Analyze Command Features
+
+### Project Analyze Command Features
 1. state => Informs you if your local repository is up-to-date with the remote repository
 2. changes => Appends all uncommited changes into a file (changes.log)
 3. todo => Appends every line with #TODO into a file (todo.log)
 4. error => Scans all haskell files for syntax errors and appends the results into a file (error.log)
 
-## Additional Features
+### Additional Features
 1. due(1-3) => Will check then output whether Assignments 1-3 are still due or if there due dates have passed
 
-## General Additional Features
+### General Additional Features
 1. Looping Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
 
