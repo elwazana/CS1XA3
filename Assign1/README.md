@@ -3,7 +3,7 @@
 #### README for ProjectAnalyze.sh 
 Executing the program will result in a prompt appearing that will request a command. Each command along with what they indiviually do is described in the Command Features section.
 
-Additional Features will describe any entirely new features implemented by the creator.
+Additional Features will describe any entirely new implented features.
 
 General Additional Features are additional features that improve the general quality of the entire script.
 
@@ -15,6 +15,9 @@ General Additional Features are additional features that improve the general qua
 
 ### Additional Features
 1. due(1-3) => Will check then output whether Assignments 1-3 are still due or if there due dates have passed
+	- due1 => Ckecks if Assignment 1 is due
+	- due2 => Checks if Assignment 2 is due
+	- due3 => Checks if Assignment 3 is due
 
 ### General Additional Features
 1. Looping Execution:
@@ -24,4 +27,10 @@ General Additional Features are additional features that improve the general qua
 	This feature allows the suer to run any combiniation of commands without needing to re-execute the script. when prompted to "Enter command: " the user my enter exit to quit the script.
 
 3. Open File:
-	Any feature that results in the creation/appending of a file will prompt the user "Do you wich to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
+	Any feature that results in the creation/appending of a file will prompt the user "Do you wish to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
+
+4. Attempt update:
+	After entering the state command and viewing the status of the repository the user will be asked whether they wish to attempt an update or not "Do you want to attempt an update? (Y/N: ". 
+
+5. Case Insensitivity:
+	All commands would work regardless of capitalization. 

@@ -6,7 +6,14 @@ do
 	read -p "Enter command: "  Input
 	if [ "${Input,,}" = "state" ]; then
 		git status
+		
+		read -p "Would you like to attempt an update? (Y/N): " Input2
+		if [ "${Input2,,}" = "y" ]; then
+		
+			git pull
 
+		fi
+		
 	elif [ "${Input,,}" = "changes" ]; then
 		git diff > changes.log
 		
@@ -43,5 +50,14 @@ do
 	elif [ "${Input,,}" = "due2" ]; then
 		./Due2.sh
 
+	elif [ "${Input,,}" = "due3" ]; then
+                ./Due3.sh
+	
+	elif [ "${Input,,}" = "exit" ]; then
+		break
+	
+	else
+		echo "No such command exists" 
 	fi
+	
 done
