@@ -20,17 +20,17 @@ General Additional Features are additional features that improve the general qua
 	- due3 => Checks if Assignment 3 is due
 
 ### General Additional Features
-1. Looping Execution:
+1. Selective-Looping Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
 
-2. Execution till exit:
-	This feature allows the suer to run any combiniation of commands without needing to re-execute the script. when prompted to "Enter command: " the user my enter exit to quit the script.
+	* Execution till exit:
+		The user must enter "exit" when propmted to enter a command to end the script.
 
-3. Open File:
+2. Open File:
 	Any feature that results in the creation/appending of a file will prompt the user "Do you wish to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
 
-4. Attempt update:
+3. Attempt update:
 	After entering the state command and viewing the status of the repository the user will be asked whether they wish to attempt an update or not "Do you want to attempt an update? (Y/N: ". 
 
-5. Case Insensitivity:
+4. Case Insensitivity:
 	All commands would work regardless of capitalization. 
