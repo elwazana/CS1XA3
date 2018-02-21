@@ -35,7 +35,7 @@ do
 		fi
 
 	elif [ "${Input,,}" = "error" ];then
-		ghc -fno-code *.hs > error.log
+		ghc -fno-code *.hs &>> error.log
 
 		read -p "Would you like to view error.log? (Y/N): " Input2
 		if [ "${Input2,,}" = "y" ]; then
