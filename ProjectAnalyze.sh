@@ -45,13 +45,13 @@ do
 		fi
 
 	elif [ "${Input,,}" = "due1" ]; then
-		./Due1.sh
+		./Assign1/Due1.sh
 
 	elif [ "${Input,,}" = "due2" ]; then
-		./Due2.sh
+		./Assign1/Due2.sh
 
 	elif [ "${Input,,}" = "due3" ]; then
-                ./Due3.sh
+                ./Assign1/Due3.sh
 	
 	elif [ "${Input,,}" = "exit" ]; then
 		break
