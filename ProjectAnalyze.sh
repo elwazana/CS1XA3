@@ -25,7 +25,7 @@ do
 		fi
 
 	elif [ "${Input,,}" = "todo" ]; then
-		grep -r --exclude=todo.log "#TODO" ~/CS1XA3/Assign1 > todo.log
+		grep -r -h --exclude=ProjectAnalyze.sh --exclude=todo.log "#TODO" ~/CS1XA3/Assign1 > todo.log
 
 		read -p "Would you like to view todo.log? (Y/N): " Input2
 		if [ "${Input2,,}" = "y" ]; then
@@ -35,7 +35,7 @@ do
 		fi
 
 	elif [ "${Input,,}" = "error" ];then
-		ghc -fno-code *.hs &>> error.log
+		ghc -fno-code *.hs &> error.log
 
 		read -p "Would you like to view error.log? (Y/N): " Input2
 		if [ "${Input2,,}" = "y" ]; then
@@ -53,6 +53,9 @@ do
 	elif [ "${Input,,}" = "due3" ]; then
                 ./Assign1/Due3.sh
 	
+	elif [ "${Input,,}" = "time" ]; then
+		./Assign1/Time.sh
+
 	elif [ "${Input,,}" = "exit" ]; then
 		break
 	

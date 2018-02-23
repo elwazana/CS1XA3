@@ -53,6 +53,9 @@ do
 	elif [ "${Input,,}" = "due3" ]; then
                 ./Due3.sh
 	
+	elif [ "${Input,,}" = "time" ]; then
+		./Time.sh	
+
 	elif [ "${Input,,}" = "exit" ]; then
 		break
 	

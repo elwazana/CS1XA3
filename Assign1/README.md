@@ -19,6 +19,11 @@ General Additional Features are additional features that improve the general qua
 	- due2 => Checks if Assignment 2 is due
 	- due3 => Checks if Assignment 3 is due
 
+2. time => Will propmt the user asking if they want to see the exact time as a 24 hour clock(ie 12:00 AM = 12:00, 12:00 PM = 24:00). [ cite: https://stackoverflow.com/questions/16548528/linux-command-to-get-time-in-milliseconds ]
+	* Entering "nano" for the prompt will result in the current time up to the nanosecond to be outputed
+	* Entering "milli" for the prompt will result in the current time up to the millisecond to be outputed
+	* Entering "n" for the prompt will result in the current time up to the second to be outputed
+
 ### General Additional Features
 1. Selective-Looping Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. It also continuaosly asks for commands.
