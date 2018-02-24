@@ -24,6 +24,10 @@ General Additional Features are additional features that improve the general qua
 	* Entering "milli" for the prompt will result in the current time up to the millisecond to be outputed
 	* Entering "n" for the prompt will result in the current time up to the second to be outputed
 
+3. search => Will find a specified file/line with a given parameter. [ cite: https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh ] 
+	* Entering "file" when prompted, then a desired pattern to be searched for when prompted, will output all file names containing the specified pattern.
+	* Entering "line" when prompted, then a desired pattern to be searched for when prompted will output all lines in files containing the specified pattern.
+
 ### General Additional Features
 1. Selective Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 

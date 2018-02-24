@@ -56,9 +56,12 @@ do
 	elif [ "${Input,,}" = "time" ]; then
 		./Assign1/Time.sh
 
+	elif [ "${Input,,}" = "search" ]; then
+		./Assign1/Search.sh
+
 	elif [ "${Input,,}" = "exit" ]; then
-		break
-	
+		break	
+
 	else
 		echo "No such command exists" 
 	fi
