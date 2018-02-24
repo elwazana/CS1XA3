@@ -25,17 +25,17 @@ General Additional Features are additional features that improve the general qua
 	* Entering "n" for the prompt will result in the current time up to the second to be outputed
 
 ### General Additional Features
-1. Selective-Looping Execution:
-	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. It also continuaosly asks for commands.
+1. Selective Execution:
+	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
 
-	* Execution till exit:
-		The user must enter "exit" when propmted to "Enter a command: " to end the script.
+2. Looping Execution:
+	This feature entails that commands can be continually enetered, until the users enters "exit" to end the script.
 
-2. Open File:
+3. Open File:
 	Any feature that results in the creation/appending of a file will prompt the user "Do you wish to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
 
-3. Attempt update:
+4. Attempt update:
 	After entering the state command and viewing the status of the repository the user will be asked whether they wish to attempt an update or not "Do you want to attempt an update? (Y/N): ". 
 
-4. Case Insensitivity:
+5. Case Insensitivity:
 	All commands would work regardless of capitalization. 
