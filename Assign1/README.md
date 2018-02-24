@@ -28,6 +28,11 @@ General Additional Features are additional features that improve the general qua
 	* Entering "file" when prompted, then a desired pattern to be searched for when prompted, will output all file names containing the specified pattern.
 	* Entering "line" when prompted, then a desired pattern to be searched for when prompted will output all lines in files containing the specified pattern.
 
+4. replace => Will allow the user to change an inputed word into another word in a chosen file, creates another file named "M.fileName" for it being a modified verison of the original file. (Due tot he nature of this feature the inputs must be case sensitive)
+	* First the user must enter a file name in the current directory.
+	* Then the user must enter a word he/she wishes to replace
+	* Then the user must enter the word he/she wishes to replace with
+
 ### General Additional Features
 1. Selective Execution:
 	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
