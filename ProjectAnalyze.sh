@@ -59,6 +59,9 @@ do
 	elif [ "${Input,,}" = "search" ]; then
 		./Assign1/Search.sh
 
+	elif [ "${Input,,}" = "replace" ]; then
+		./Assign1/Replace.sh
+	
 	elif [ "${Input,,}" = "exit" ]; then
 		break	
 
