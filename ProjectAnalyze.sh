@@ -25,7 +25,7 @@ do
 		fi
 
 	elif [ "${Input,,}" = "todo" ]; then
-		grep -r -h --exclude=ProjectAnalyze.sh --exclude=todo.log "#TODO" ~/CS1XA3/Assign1 > todo.log
+		grep -r -h --exclude=ProjectAnalyze.sh --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
 
 		read -p "Would you like to view todo.log? (Y/N): " Input2
 		if [ "${Input2,,}" = "y" ]; then
