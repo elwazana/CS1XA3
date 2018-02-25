@@ -45,23 +45,26 @@ do
 		fi
 
 	elif [ "${Input,,}" = "due1" ]; then
-		./Assign1/Due1.sh
+		./Assign1/Features/Due1.sh
 
 	elif [ "${Input,,}" = "due2" ]; then
-		./Assign1/Due2.sh
+		./Assign1/Features/Due2.sh
 
 	elif [ "${Input,,}" = "due3" ]; then
-                ./Assign1/Due3.sh
+                ./Assign1/Features/Due3.sh
 	
 	elif [ "${Input,,}" = "time" ]; then
-		./Assign1/Time.sh
+		./Assign1/Features/Time.sh
 
 	elif [ "${Input,,}" = "search" ]; then
-		./Assign1/Search.sh
+		./Assign1//Features/Search.sh
 
 	elif [ "${Input,,}" = "replace" ]; then
-		./Assign1/Replace.sh
+		./Assign1/Features/Replace.sh
 	
+	elif [ "${Input,,}" = "diff" ]; then
+		./Assign1/Features/Diff.sh	
+
 	elif [ "${Input,,}" = "exit" ]; then
 		break	
 
