@@ -2,9 +2,7 @@
 
 #### README for ProjectAnalyze.sh 
 Executing the script will result in a prompt appearing that will request a command. Each command along with what they indiviually do is described in the Command Features section.
-
-	* Additional Features will describe any entirely new implented features.
-
+	* Additional Features will describe any entirely new implented features
 	* General Additional Features are additional features that improve the general quality of the entire script.
 
 ### Project Analyze Command Features
@@ -33,7 +31,7 @@ Executing the script will result in a prompt appearing that will request a comma
 	* Then the user must enter a word he/she wishes to replace
 	* Then the user must enter the word he/she wishes to replace with
 
-5. diff => Will create a diff.log file contained any differences between the local repository and the master repository, will also output the differences for viewing. [ cite: https://github.com/deleeuwj1/CS1XA3/blob/master/ProjectAnalyze.sh ]
+5. diff => Will create a diff.log file contained any differences between the local repository and the master repository, will also output the differences for viewing. [ cite: https://github.com/deleeuwj1/CS1XA3/blob/master/ProjectAnalyze.sh and https://stackoverflow.com/questions/9964823/how-to-check-if-a-file-is-empty-in-bash ]
 
 ### General Additional Features
 1. Selective Execution:
