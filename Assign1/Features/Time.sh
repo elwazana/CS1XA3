@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# time command outputs the time either to the nanosecond, millisecond, or regular seconds
+# time command: outputs the time either to the nanosecond, millisecond, or regular seconds
 read -p "Would you like to see the exact time to the nano/milliseconds? (nano/milli/N): " ANS
 
 # Outputs time to the nanosecond

@@ -2,7 +2,7 @@
 
 # A modified way of execution of gibsoj12's search feature (https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh)
 
-# search command finds a file/line with an inputed pattern
+# search command: finds a file/line with an inputed pattern
 read -p "Would you like to view file names, or lines containing your search parameter? (file/line):" WANTEDTYPE
 read -p "Enter the pattern you would like to search for." PATTERN
 		
