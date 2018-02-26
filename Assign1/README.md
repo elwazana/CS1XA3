@@ -6,7 +6,7 @@ Executing the script will result in a prompt appearing that will request a comma
 	* General Additional Features are additional features that improve the general quality of the entire script.
 
 ### Project Analyze Command Features
-1. "state" => Informs you if your local repository is up-to-date with the remote repository
+1. "state" => Informs you if your local repository is up-to-date with the remote repository [ cite: https://stackoverflow.com/questions/7938723/git-how-to-check-if-a-local-repo-is-up-to-date ]
 2. "changes" => Appends all uncommited changes into a file (changes.log)
 3. "todo" => Appends every line with #TODO into a file (todo.log)
 4. "error" => Scans all haskell files for syntax errors and appends the results into a file (error.log)
