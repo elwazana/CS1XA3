@@ -1,14 +1,14 @@
 #!/bin/bash
 
-read -p "Would you like to see the exact time to the nano/milliseconds? (nano/milli/N): " Ans
+read -p "Would you like to see the exact time to the nano/milliseconds? (nano/milli/N): " ANS
 
-if [ ${Ans,,} = "nano" ]; then
+if [ ${ANS,,} = "nano" ]; then
 	echo $(date +"%T.%N")
 
-elif [ ${Ans,,} = "milli" ]; then
+elif [ ${ANS,,} = "milli" ]; then
 	echo $(date +"%T.%3N")
 
-elif [ ${Ans,,} = "n" ]; then
+elif [ ${ANS,,} = "n" ]; then
 	echo $(date +"%T")	
 
 else

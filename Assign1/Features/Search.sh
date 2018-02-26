@@ -2,16 +2,16 @@
 
 # A modified way of execution of gibsoj12's search feature (https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh)
 
-read -p "Would you like to view file names, or lines containing your search parameter? (file/line):" wantedType
-read -p "Enter the pattern you would like to search for." pattern
+read -p "Would you like to view file names, or lines containing your search parameter? (file/line):" WANTEDTYPE
+read -p "Enter the pattern you would like to search for." PATTERN
 		
-if [ "$wantedType" = "file" ]; then
-	findings=$(find -iname "*${pattern}*") # Modified aspect: Use "find" instead of "grep" to search for file pattern.
-	echo "$findings"
+if [ "${WANTEDTYPE,,}" = "file" ]; then
+	FINDINGS=$(find -iname "*${PATTERN}*") # Modified aspect: Use "find" instead of "grep" to search for file pattern.
+	echo "$FINDINGS"
 		
-elif [ "$wantedType" = "line" ]; then
-	findings=$(grep -i -r --exclude=ProjectAnalyze.sh --exclude=Search.sh "$pattern") 
-	echo "$findings"
+elif [ "${WANTEDTYPE,,}" = "line" ]; then
+	FINDINGS=$(grep -i -r --exclude=ProjectAnalyze.sh --exclude=Search.sh "$PATTERN") 
+	echo "$FINDINGS"
 
 else
 
