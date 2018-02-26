@@ -38,7 +38,7 @@ do
 		fi
 
 	elif [ "${INPUT,,}" = "error" ];then	# error command: creates a file 'error.log' with all syntax errors found in all haskell files
-		find . -name *.hs -exec ghc -fno-code {} \; &> error.log
+		find . -type f -name *.hs -exec ghc -fno-code {} \; &> error.log
 		
 		if [[ -s error.log ]]; then	# Checks if there are any errors
 			read -p "Would you like to view contents of error.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
