@@ -28,7 +28,7 @@ do
 		fi
 
 	elif [ "${INPUT,,}" = "todo" ]; then	# todo command: 
-		grep -r -h --exclude=ProjectAnalyze.sh --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
+		grep -r -h  --exclude=ProjectAnalyze.sh --exclude=Assign1/ProjectAnalyze.sh/ --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
 
 		read -p "Would you like to view contents of todo.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${INPUT2,,}" = "y" ]; then
@@ -38,7 +38,7 @@ do
 		fi
 
 	elif [ "${INPUT,,}" = "error" ];then	# error command: creates a file 'error.log' with all syntax errors found in all haskell files
-		find . -type f -name "*.hs" -exec ghc -fno-code {} \; &> error.log
+		find ~/CS1XA3/ -type f -name "*.hs" -exec ghc -fno-code {} \; &> error.log
 		
 		if [[ -s error.log ]]; then	# Checks if there are any errors
 			read -p "Would you like to view contents of error.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
