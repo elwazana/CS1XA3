@@ -20,20 +20,20 @@ do
 	elif [ "${Input,,}" = "changes" ]; then	# changes command: creates a file with all the uncommitted changes
 		git diff > changes.log
 		
-		read -p "Would you like to view changes.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
+		read -p "Would you like to view contents of changes.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${Input2,,}" = "y" ]; then
 		
-			vim changes.log
+			cat changes.log
 		
 		fi
 
 	elif [ "${Input,,}" = "todo" ]; then	# todo command: 
 		grep -r -h --exclude=ProjectAnalyze.sh --exclude=*.log --exclude-dir=Assign1/Features "#TODO" ~/CS1XA3/ > todo.log
 
-		read -p "Would you like to view todo.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
+		read -p "Would you like to view contents of todo.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${Input2,,}" = "y" ]; then
 
-			vim todo.log
+			cat todo.log
 
 		fi
 
@@ -41,10 +41,10 @@ do
 		find . -name *.hs -exec ghc -fno-code {} \; &> error.log
 		
 		if [[ -s error.log ]]; then	# Checks if there are any errors
-			read -p "Would you like to view error.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
+			read -p "Would you like to view contents of error.log? (Y/N): " Input2	# Viewing created file, asks if the user wants to view the created file
 			if [ "${Input2,,}" = "y" ]; then
 
-				vim error.log
+				cat error.log
 
 			fi
 		else

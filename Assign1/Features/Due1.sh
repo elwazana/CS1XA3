@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# due1 command: Checks is Assignment 1 in the course CS1XA3
 year=$(($(date '+%Y')))
 month=$(($(date '+%m')))
 day=$(($(date '+%d')))

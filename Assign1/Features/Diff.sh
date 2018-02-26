@@ -7,8 +7,10 @@ if [ "${ans,,}" = "y" ]; then
 	d=$"git diff origin/master master"
         $d &> diffs.log
 
-	if  [[ -s diffs.log ]]; then #Modification checking if there are no differences
+	if  [[ -s diffs.log ]]; then #Modification checking if there are differences
 		cat diffs.log
+	
+	# If there are no differences then output error message
 	else
 		echo "There are no differences between the local and master repositories"
 	fi
