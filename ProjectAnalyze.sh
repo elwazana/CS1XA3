@@ -43,13 +43,10 @@ do
 		if [[ -s error.log ]]; then	# Checks if there are any errors
 			read -p "Would you like to view contents of error.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 			if [ "${INPUT2,,}" = "y" ]; then
-
 				cat error.log
-
 			fi
 		else
 			echo "No errors were found"
-
 		fi
 
 	# Additional feature executed as sub-scripts all stored at CS1XA3/Assign1/Features
