@@ -35,13 +35,13 @@ Executing the script will result in a prompt appearing that will request a comma
 
 ### General Additional Features
 1. Selective Execution:
-	This feature allows the user to execute indiual aspects of the script without the need to execute it in its entirety. 
+	This feature allows the user to execute indiual features of the script without the need to execute all features whenever the script is run. 
 
 2. Looping Execution:
 	This feature entails that commands can be continually enetered, until the users enters "exit" to end the script.
 
-3. Open File:
-	Any feature that results in the creation/appending of a file will prompt the user "Do you wish to view ____.log? (Y/N): " this allows the user to immediatley view the created file.
+3. View File Contents:
+	Any feature that results in the creation/appending of a file will prompt the user "Do you wish to view ____.log? (Y/N): " this allows the user to immediatley view the created file's content.
 
 4. Attempt update:
 	After entering the state command and viewing the status of the repository the user will be asked whether they wish to attempt an update or not "Do you want to attempt an update? (Y/N): ". 
