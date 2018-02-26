@@ -25,7 +25,7 @@ do
 		fi
 
 	elif [ "${Input,,}" = "todo" ]; then
-		grep -r --exclude=todo.log "#TODO" ~/CS1XA3/Assign1 > todo.log
+		grep -r -h --exclude=ProjectAnalyze.sh --exclude=*.log --exclude-dir=Assign1/Features "#TODO" ~/CS1XA3/ > todo.log
 
 		read -p "Would you like to view todo.log? (Y/N): " Input2
 		if [ "${Input2,,}" = "y" ]; then
@@ -35,30 +35,44 @@ do
 		fi
 
 	elif [ "${Input,,}" = "error" ];then
-		ghc -fno-code *.hs &> error.log
+		find . -name *.hs -exec ghc -fno-code {} \; &> error.log
+		
+		if [[ -s error.log ]]; then
+			read -p "Would you like to view error.log? (Y/N): " Input2
+			if [ "${Input2,,}" = "y" ]; then
 
-		read -p "Would you like to view error.log? (Y/N): " Input2
-		if [ "${Input2,,}" = "y" ]; then
+				vim error.log
 
-			vim error.log
+			fi
+		else
+			echo "No errors were found"
 
 		fi
 
 	elif [ "${Input,,}" = "due1" ]; then
-		./Due1.sh
+		./Assign1/Features/Due1.sh
 
 	elif [ "${Input,,}" = "due2" ]; then
-		./Due2.sh
+		./Assign1/Features/Due2.sh
 
 	elif [ "${Input,,}" = "due3" ]; then
-                ./Due3.sh
+                ./Assign1/Features/Due3.sh
 	
 	elif [ "${Input,,}" = "time" ]; then
-		./Time.sh	
+		./Assign1/Features/Time.sh
+
+	elif [ "${Input,,}" = "search" ]; then
+		./Assign1//Features/Search.sh
+
+	elif [ "${Input,,}" = "replace" ]; then
+		./Assign1/Features/Replace.sh
+	
+	elif [ "${Input,,}" = "diff" ]; then
+		./Assign1/Features/Diff.sh	
 
 	elif [ "${Input,,}" = "exit" ]; then
-		break
-	
+		break	
+
 	else
 		echo "No such command exists" 
 	fi
