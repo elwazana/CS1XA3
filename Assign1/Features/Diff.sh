@@ -9,9 +9,12 @@ $D &> diffs.log
 if  [[ -s diffs.log ]]; then # (Modification) Checking if there are differences between the repos
 	read -p "Would you like to view the content of diff.log? (Y/M): " ANS
 	if [ "${ANS,,}" = "y" ]; then
+		echo ""
 		cat diffs.log
+		echo ""
 	fi
-	# If there are no differences then output error message
+
+# If there are no differences then output error message
 else
 	echo "There are no differences between the local and master repositories"
 fi

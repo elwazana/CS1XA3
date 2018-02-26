@@ -9,5 +9,7 @@ read -p "Word you wish to replace with: " NEW
 sed "s/${OLD}/${NEW}/g" "$FILE" > "M.$FILE"
 read -p "Would you like to view the contents of the modified file? (Y/N): " ANS	# Viewing the modified file content
 if [ "${ANS,,}" = "y" ]; then
+	echo ""
 	cat "M.$FILE"
+	echo ""
 fi

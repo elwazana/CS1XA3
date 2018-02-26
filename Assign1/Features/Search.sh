@@ -8,11 +8,15 @@ read -p "Enter the pattern you would like to search for." PATTERN
 		
 if [ "${WANTEDTYPE,,}" = "file" ]; then
 	FINDINGS=$(find -iname "*${PATTERN}*") # (Modification) Use "find" instead of "grep" to search for file pattern.
+	echo ""
 	echo "$FINDINGS"
-		
+	echo ""
+	
 elif [ "${WANTEDTYPE,,}" = "line" ]; then
 	FINDINGS=$(grep -i -r --exclude=ProjectAnalyze.sh --exclude=Search.sh "$PATTERN") 
+	echo ""
 	echo "$FINDINGS"
+	echo ""
 
 else
 

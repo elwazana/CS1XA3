@@ -7,24 +7,29 @@ do
 	read -p "Enter command: "  INPUT	# Main user command input
 	
 	if [ "${INPUT,,}" = "state" ]; then	# state command: checks if local repo and master repo are the same
-		git status
-		
-		read -p "Would you like to attempt an update? (Y/N): " INPUT2	# Attempt update, asks to see if the user wants to try an update after executing the repo check feature
-
-		if [ "${INPUT2,,}" = "y" ]; then
-		
-			git pull
-
+		CHECK=$(git status -uno | grep "up-to-date")	# Checks if local repo is updated
+		if [ "$CHECK" = "" ]; then
+			echo ""
+			echo "Local repository is not up-to-date"
+			echo ""
+			read -p "Would you like to attempt an update? (Y/N): " INPUT2 # Attempt update general feature
+			if [ "${INPUT2,,}" = "y" ]; then
+				git pull
+			fi
+		else
+			echo ""
+			echo "Local repository is up to date"
+			echo ""
 		fi
-		
+
 	elif [ "${INPUT,,}" = "changes" ]; then	# changes command: creates a file with all the uncommitted changes
 		git diff > changes.log
 		
 		read -p "Would you like to view contents of changes.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${INPUT2,,}" = "y" ]; then
-		
+			echo ""
 			cat changes.log
-		
+			echo ""
 		fi
 
 	elif [ "${INPUT,,}" = "todo" ]; then	# todo command: craetes a file, todo.log, that contains all lines with the tag "#TODO" 
@@ -32,9 +37,9 @@ do
 
 		read -p "Would you like to view contents of todo.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${INPUT2,,}" = "y" ]; then
-
+			echo ""
 			cat todo.log
-
+			echo ""
 		fi
 
 	elif [ "${INPUT,,}" = "error" ];then	# error command: creates a file 'error.log' with all syntax errors found in all haskell files
@@ -43,10 +48,14 @@ do
 		if [[ -s error.log ]]; then	# Checks if there are any errors
 			read -p "Would you like to view contents of error.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 			if [ "${INPUT2,,}" = "y" ]; then
+				echo ""
 				cat error.log
+				echo ""
 			fi
 		else
+			echo ""
 			echo "No errors were found"
+			echo ""
 		fi
 
 	# Additional feature executed as sub-scripts all stored at CS1XA3/Assign1/Features
