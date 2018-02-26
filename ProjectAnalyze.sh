@@ -70,7 +70,20 @@ do
 
 	# Error output if the command user input is non-existent
 	else
+		echo ""
 		echo "No such command exists" 
+		echo "The commands that do exist are: "
+		echo "state"
+		echo "changes"
+		echo "todo"
+		echo "error"
+		echo "due"
+		echo "time"
+		echo "search"
+		echo "replace"
+		echo "diff"
+		echo "exit"
+		echo ""
 	fi
 	
 done

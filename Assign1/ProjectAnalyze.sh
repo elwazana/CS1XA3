@@ -27,7 +27,7 @@ do
 		
 		fi
 
-	elif [ "${INPUT,,}" = "todo" ]; then	# todo command: 
+	elif [ "${INPUT,,}" = "todo" ]; then	# todo command: craetes a file, todo.log, that contains all lines with the tag "#TODO" 
 		grep -r -h  --exclude=ProjectAnalyze.sh --exclude=Assign1/ProjectAnalyze.sh/ --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
 
 		read -p "Would you like to view contents of todo.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
@@ -70,7 +70,20 @@ do
 
 	# Error output if the command user input is non-existent
 	else
+		echo ""
 		echo "No such command exists" 
+		echo "The commands that do exist are: "
+		echo "state"
+		echo "changes"
+		echo "todo"
+		echo "error"
+		echo "due"
+		echo "time"
+		echo "search"
+		echo "replace"
+		echo "diff"
+		echo "exit"
+		echo ""
 	fi
 	
 done
