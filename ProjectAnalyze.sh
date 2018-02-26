@@ -9,7 +9,7 @@ do
 	if [ "${INPUT,,}" = "state" ]; then	# state command: checks if local repo and master repo are the same
 		CHECK=$(git status -uno | grep "up-to-date")	# Checks if local repo is updated
 		if [ "$CHECK" = "" ]; then
-			echo ""
+			echo ""					# Improves readability of the output
 			echo "Local repository is not up-to-date"
 			echo ""
 			read -p "Would you like to attempt an update? (Y/N): " INPUT2 # Attempt update general feature
