@@ -12,7 +12,7 @@ Executing the script will result in a prompt appearing that will request a comma
 4. "error" => Scans all haskell files for syntax errors and appends the results into a file (error.log)
 
 ### Additional Features
-1. "due" => Will check then output whether Assignments 1-3 for the course CS1XA3 are still due or if there due dates have passed
+1. "due" => Will check then output whether Assignments 1-3 for the course CS1XA3 are still due or if their due dates have passed
 
 2. "time" => Will propmt the user asking if they want to see the exact time as a 24 hour clock(ie 12:00 AM = 12:00, 12:00 PM = 24:00). [ cite: https://stackoverflow.com/questions/16548528/linux-command-to-get-time-in-milliseconds ]
 	* Entering "nano" for the prompt will result in the current time up to the nanosecond to be outputed
