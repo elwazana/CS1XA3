@@ -5,6 +5,9 @@ Executing the script will result in a prompt appearing that will request a comma
 	* Additional Features will describe any entirely new implented features
 	* General Additional Features are additional features that improve the general quality of the entire script.
 
+##### Usage
+After running the script (./ProjectAnalyze.sh 'in the root directory'), a prompt "Enter a command: " will appear. Listed below are the commands of each feature along with a description of each feature. 
+
 ### Project Analyze Command Features
 1. "state" => Informs you if your local repository is up-to-date with the remote repository [ cite: https://stackoverflow.com/questions/7938723/git-how-to-check-if-a-local-repo-is-up-to-date ]
 2. "changes" => Appends all uncommited changes into a file (changes.log)
