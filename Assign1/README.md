@@ -24,7 +24,7 @@ After running the script (./ProjectAnalyze.sh 'in the root directory'), a prompt
 
 3. "search" => Will find a specified file/line with a given parameter. Ignores the hidden files in the project and this README file when searching for a line PATTERN. [ cite: https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh and https://unix.stackexchange.com/questions/158638/exclude-hidden-subdirectories-from-grep-r ] 
 	* Entering "file" when prompted, then a desired pattern to be searched for when prompted, will output all file names containing the specified pattern.
-	* Entering "line" when prompted, then a desired pattern to be searched for when prompted will output all lines in files containing the specified pattern, ignore hidden files and this README file .
+	* Entering "line" when prompted, then a desired pattern to be searched for when prompted will output all lines in files containing the specified pattern, ignores hidden files and this README file .
 
 4. "replace" => Will allow the user to change an inputed PATTERN into another PATTERN in a chosen file, creates another file named "M.file_Name" for it being a modified verison of the original file. (Due to he nature of this feature the inputs must be case sensitive)
 	* First the user must enter a file name in the current directory.
