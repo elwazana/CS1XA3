@@ -19,7 +19,7 @@ Executing the script will result in a prompt appearing that will request a comma
 	* Entering "milli" for the prompt will result in the current time up to the millisecond to be outputed
 	* Entering "n" for the prompt will result in the current time up to the second to be outputed
 
-3. "search" => Will find a specified file/line with a given parameter. [ cite: https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh ] 
+3. "search" => Will find a specified file/line with a given parameter. Ignores the hidden files in the project. [ cite: https://github.com/gibsoj12/CS1XA3/blob/master/ProjectAnalyze.sh and https://unix.stackexchange.com/questions/158638/exclude-hidden-subdirectories-from-grep-r ] 
 	* Entering "file" when prompted, then a desired pattern to be searched for when prompted, will output all file names containing the specified pattern.
 	* Entering "line" when prompted, then a desired pattern to be searched for when prompted will output all lines in files containing the specified pattern.
 
