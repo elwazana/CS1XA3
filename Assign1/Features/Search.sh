@@ -13,7 +13,7 @@ if [ "${WANTEDTYPE,,}" = "file" ]; then
 	echo ""
 	
 elif [ "${WANTEDTYPE,,}" = "line" ]; then
-	FINDINGS=$(grep -i -h -r --exclude-dir='.*' --exclude='.*' --exclude=ProjectAnalyze.sh --exclude=Search.sh "$PATTERN") 
+	FINDINGS=$(grep -i -h -r --exclude-dir='.*' --eclude=Assign1/ProjectAnalyze.sh --exclude=ProjectAnalyze.sh --exclude=Search.sh "$PATTERN") 
 	echo ""
 	echo "$FINDINGS"
 	echo ""
