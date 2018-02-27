@@ -33,7 +33,7 @@ do
 		fi
 
 	elif [ "${INPUT,,}" = "todo" ]; then	# todo command: craetes a file, todo.log, that contains all lines with the tag "#TODO" 
-		grep -r -h  --exclude=ProjectAnalyze.sh --exclude=Assign1/ProjectAnalyze.sh/ --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
+		grep -r -h --exclude=README.md --exclude=ProjectAnalyze.sh --exclude=Assign1/ProjectAnalyze.sh/ --exclude=todo.log "#TODO" ~/CS1XA3/ > todo.log
 
 		read -p "Would you like to view contents of todo.log? (Y/N): " INPUT2	# Viewing created file, asks if the user wants to view the created file
 		if [ "${INPUT2,,}" = "y" ]; then
