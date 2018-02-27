@@ -7,7 +7,7 @@ D=$"git diff origin/master master"	# Finds the differences then stores them in a
 $D &> diffs.log
 
 if  [[ -s diffs.log ]]; then # (Modification) Checking if there are differences between the repos
-	read -p "Would you like to view the content of diff.log? (Y/M): " ANS
+	read -p "Would you like to view the content of diff.log? (Y/N): " ANS
 	if [ "${ANS,,}" = "y" ]; then
 		echo ""
 		cat diffs.log
