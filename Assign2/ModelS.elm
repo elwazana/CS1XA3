@@ -1,4 +1,4 @@
--- Type definitions for model, Berry, and other aspects for Snake-io.elm
+-- Type definitions for model, berry, and other aspects for Snake-io.elm
 module ModelS exposing (..)
 
 type Direction =
@@ -23,11 +23,13 @@ type alias Berry = Maybe Point
 
 type alias Score = Int
 
+type alias Timer = Int
+
 type Model =
     TitleScreen
     | Initializing Difficulty
     | Playing Snake Berry Score Difficulty
-    | GameOver Score
+    | GameOver Score Difficulty
 
 type Difficulty
   = Easy

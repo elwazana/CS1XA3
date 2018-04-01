@@ -38,7 +38,7 @@ randPoint = Random.pair (Random.float 0 1) (Random.float 0 1)
 generator : Random.Generator (Float,Point)
 generator = Random.pair (Random.float 0 1) randPoint
 
--- Initial states of entities 
+-- Initial states of the app
 initSnake : Snake
 initSnake = let
       front = (0,0)
@@ -62,13 +62,13 @@ subscriptions model = case model of
         , Time.every (Time.inMilliseconds 50) Tick
         ]
 
-    GameOver _ ->
+    GameOver _ _ ->
       Keyboard.presses KeyPress
 
     _ ->
       Sub.none
 
--- Defining Views for the game
+-- Defining various Views for the game
 view : Model -> Html Msg
 view model = let
       wrapper = (\body -> div [] [ headerView, body ] )
@@ -76,7 +76,7 @@ view model = let
       TitleScreen -> wrapper ( titleView model )
       Initializing _ -> wrapper ( gameView model )
       Playing _ _ _ _ -> wrapper ( gameView model )
-      GameOver _ -> wrapper ( gameView model)
+      GameOver _ _ -> wrapper ( gameView model)
 
 headerView : Html Msg
 headerView = div [ class "container" ]
@@ -101,8 +101,8 @@ gameView model = let
                   Initializing _ ->
                     [ txt "press SPACE to start\n[w, a, s, d] controls snake" ]
 
-                  GameOver score ->
-                    [ txt "\n\nGAME OVER", txt (toString score) ]
+                  GameOver score _ ->
+                    [ txt "\n\n\n\nGAME OVER\npress ENTER to reset\npress SPACE to select difficulty", txt (toString score) ]
 
                   Playing snake berry score _ ->
                     let
@@ -125,7 +125,7 @@ gameView model = let
       in collage width height (bg :: content)
           |> Element.toHtml
 
--- Defining Updates (along with variations for difficulty)
+-- Defining the Update with variations for different Difficulties
 update : Msg -> Model -> (Model,Cmd Msg)
 update msg model = case model of
       TitleScreen ->
@@ -150,10 +150,13 @@ update msg model = case model of
           _ ->
             (model,Cmd.none)
 
-      GameOver _ ->
+      GameOver _ diff ->
         case msg of
           KeyPress 32 ->
             (TitleScreen, Cmd.none)
+
+          KeyPress 13 ->
+            (Initializing diff, Cmd.none)
 
           _ ->
             (model,Cmd.none)
@@ -193,7 +196,7 @@ update msg model = case model of
                         (berry, score)
                     gameOver = isGameOver newFront newBack
                 in if gameOver then
-                    (GameOver newScore, Cmd.none)
+                    (GameOver newScore diff, Cmd.none)
                   else if newBerry == Nothing then
                     (Playing newSnake newBerry newScore diff, Random.generate Spawn generator)
                   else
@@ -217,7 +220,7 @@ update msg model = case model of
                           (berry, score)
                     gameOver = isGameOver newFront newBack
                 in if gameOver then
-                    (GameOver newScore, Cmd.none)
+                    (GameOver newScore diff, Cmd.none)
                   else if newBerry == Nothing then
                     (Playing newSnake newBerry newScore diff, Random.generate Spawn generator)
                   else
@@ -241,7 +244,7 @@ update msg model = case model of
                         (berry, score)
                     gameOver = isGameOver newFront newBack
                 in if gameOver then
-                    (GameOver newScore, Cmd.none)
+                    (GameOver newScore diff, Cmd.none)
                   else if newBerry == Nothing then
                     (Playing newSnake newBerry newScore diff, Random.generate Spawn generator)
                   else
@@ -250,7 +253,7 @@ update msg model = case model of
           _ ->
             (model,Cmd.none)
 
--- Helper Functions
+-- Defining Helper functions
 txt : String -> Form
 txt msg =
   msg
