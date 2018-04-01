@@ -1,4 +1,4 @@
-# Assignment 2
+# Assignment 2 (http://ugweb.cas.mcmaster.ca/~elwazana/ Personal CV webpage along with Snake game under Portfolio)
 
 #### README for Snake-io.elm 
 Snake-io.elm has the source code for the recreation of the classic game snake, along with a few extra additions. 
