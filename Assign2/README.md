@@ -5,6 +5,7 @@
 Snake-io.elm has the source code for the recreation of the classic game snake, along with a few extra additions. 
 The following GitHub was used as a template to build upon (https://github.com/theburningmonk/elm-snake)
 
+- P.S. index.html refers to my CV webpage source code
 ### Additional Features 
 - Screens: A title and gameover screen were implemented to imporve general game design.
 
