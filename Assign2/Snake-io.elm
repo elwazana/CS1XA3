@@ -1,8 +1,6 @@
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
---import Html.App as Html
---import Html.Events exposing (..)
 import Keyboard
 import Time exposing (..)
 import Element exposing (..)
@@ -40,7 +38,7 @@ randPoint = Random.pair (Random.float 0 1) (Random.float 0 1)
 generator : Random.Generator (Float,Point)
 generator = Random.pair (Random.float 0 1) randPoint
 
--- Initial states of the app
+-- Initial states of entities 
 initSnake : Snake
 initSnake = let
       front = (0,0)
@@ -70,6 +68,7 @@ subscriptions model = case model of
     _ ->
       Sub.none
 
+-- Defining Views for the game
 view : Model -> Html Msg
 view model = let
       wrapper = (\body -> div [] [ headerView, body ] )
@@ -126,6 +125,7 @@ gameView model = let
       in collage width height (bg :: content)
           |> Element.toHtml
 
+-- Defining Updates (along with variations for difficulty)
 update : Msg -> Model -> (Model,Cmd Msg)
 update msg model = case model of
       TitleScreen ->
@@ -250,6 +250,7 @@ update msg model = case model of
           _ ->
             (model,Cmd.none)
 
+-- Helper Functions
 txt : String -> Form
 txt msg =
   msg
