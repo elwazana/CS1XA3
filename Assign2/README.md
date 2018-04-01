@@ -15,4 +15,5 @@ The following GitHub was used as a template to build upon (https://github.com/th
 2. Normal -> Regular speed and growth grant control of snake.
 3. Hard -> Faster speed and more growth per berry lead to less control and higher chance of death.
 
+- Reset: At GameOver the player may press SPACE to select a difficulty or ENTER to reset the match with the same Difficulty. (Idea from: https://github.com/khant21/CS1XA3)
 - Some minor styling additions
