@@ -87,6 +87,7 @@ headerView = div [ class "container" ]
                   ]
                 ]
 
+-- TitleScreen display
 titleView : Model -> Html Msg
 titleView model = div [ class "container" ]
                     [ button [ onClick (Difficulty Easy) ] [ Html.text "Easy" ]
@@ -94,6 +95,7 @@ titleView model = div [ class "container" ]
                     ,  button [ onClick (Difficulty Hard) ] [ Html.text "Hard" ]
                     ]
 
+-- Actual Play display
 gameView : Model -> Html Msg
 gameView model = let
         bg = rect (toFloat width) (toFloat height)|> filled black
@@ -254,6 +256,7 @@ update msg model = case model of
             (model,Cmd.none)
 
 -- Defining Helper functions
+-- txt just to design text within play area
 txt : String -> Form
 txt msg =
   msg
@@ -263,6 +266,7 @@ txt msg =
   |> Element.centered
   |> Collage.toForm
 
+-- Controls defining 
 getNewDirection : Char.KeyCode -> ModelS.Direction -> ModelS.Direction
 getNewDirection keyCode currentDir =
   let (changeableDirs, newDir) =
@@ -274,6 +278,7 @@ getNewDirection keyCode currentDir =
       _  -> ([], currentDir)
   in if List.any ((==) currentDir) changeableDirs then newDir else currentDir
 
+-- Speed for various difficulties
 getNewSegmentEasy : Point -> ModelS.Direction -> Point
 getNewSegmentEasy (x, y) direction =
   case direction of
@@ -298,6 +303,7 @@ getNewSegmentHard (x, y) direction =
     Left  -> pos (x-snakePieceDim) y
     Right -> pos (x+snakePieceDim) y
 
+-- Death 
 isGameOver : Point -> List Point -> Bool
 isGameOver newFront newBack =
   List.any ((==) newFront) newBack   -- eat itself
@@ -306,6 +312,7 @@ isGameOver newFront newBack =
   || Tuple.first newFront < (-width / 2)     -- hit left
   || Tuple.second newFront < (-height / 2)    -- hit right
 
+-- Berry spawn
 spawnBerry : Float -> Float -> Berry
 spawnBerry randW randH =
   let x = randW * width - width / 2
