@@ -2,7 +2,7 @@
 ## Simple Haskell Math Library
 
 #### General Information 
-This Haskell Math Library is capable of the following operations:
+* This Haskell Math Library is capable of the following operations:
 	1. Basic binary Addition (Add)
 	2. Basic binary Multiplication (Mult)
 	3. Cosine (Cos), Sine (Sin), Natural log (Ln)
@@ -10,7 +10,7 @@ This Haskell Math Library is capable of the following operations:
 	5. Variables (Var)
 	6. Constants (Const)
 
-It can also perform a few basic functions:
+* It can also perform a few basic functions:
 	1. Can partially evaluate an expression
 	2. Can perform partial diferrentiation (symbolically)
 	3. Can perform some/partial simplification of expressions
