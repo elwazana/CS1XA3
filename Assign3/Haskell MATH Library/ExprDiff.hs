@@ -10,11 +10,12 @@
     Maintainer : elwazana@mcmaster.ca
     Stability : experimental
     Portability : POSIX
+    Depend : This module depends on the "ExprType" module
 -}
 
 module ExprDiff where
 
--- | This module depends on the "ExprType" module
+-- This module depends on the "ExprType" module
 import ExprType
 
 import qualified Data.Map.Strict as Map
@@ -122,17 +123,38 @@ class DiffExpr a where
                      Eg. newtonsMethod (Map.fromList [list of tuples (ie dictionary)]) "variableToDiff" (expression)
  -}
 instance (Floating a,Eq a) => DiffExpr a where
-    eval vrs (Add e1 e2)      = eval vrs e1 + eval vrs e2      -- ^ Evaultes 'Add' of type 'Expr'
-    eval vrs (Mult e1 e2)     = eval vrs e1 * eval vrs e2      -- ^ Evaultes 'Mult' of type 'Expr'
-    eval vrs (Division e1 e2) = (eval vrs e1) / (eval vrs e2)  -- ^ Evaultes 'Division' of type 'Expr'
-    eval vrs (Cos e)          = cos (eval vrs e)               -- ^ Evaultes 'Cos' of type 'Expr'
-    eval vrs (Sin e)          = sin (eval vrs e)               -- ^ Evaultes 'Sin' of type 'Expr'
-    eval vrs (Expo e1 e2)     = (eval vrs e1) ** (eval vrs e2) -- ^ Evaultes 'Expo' of type 'Expr'
-    eval vrs (Exp e)          = exp (eval vrs e)               -- ^ Evaultes 'Exp' of type 'Expr'
-    eval vrs (Ln e)           = log (eval vrs e)               -- ^ Evaultes 'Ln' of type 'Expr'
-    eval vrs (Neg e)          = (-1) * (eval vrs e)            -- ^ Evaultes 'Neg' of type 'Expr'
-    eval vrs (Const x)        = x                              -- ^ Evaultes 'Const' of type 'Expr'
-    eval vrs (Var x)          = case Map.lookup x vrs of       -- ^ Evaultes 'Var' of type 'Expr'
+    -- ^ Evaultes 'Add' of type 'Expr'
+    eval vrs (Add e1 e2)      = eval vrs e1 + eval vrs e2      
+    
+    -- ^ Evaultes 'Mult' of type 'Expr'
+    eval vrs (Mult e1 e2)     = eval vrs e1 * eval vrs e2      
+
+    -- ^ Evaultes 'Division' of type 'Expr'
+    eval vrs (Division e1 e2) = (eval vrs e1) / (eval vrs e2)  
+
+    -- ^ Evaultes 'Cos' of type 'Expr'
+    eval vrs (Cos e)          = cos (eval vrs e)   
+
+    -- ^ Evaultes 'Sin' of type 'Expr'
+    eval vrs (Sin e)          = sin (eval vrs e)        
+
+    -- ^ Evaultes 'Expo' of type 'Expr'
+    eval vrs (Expo e1 e2)     = (eval vrs e1) ** (eval vrs e2) 
+
+    -- ^ Evaultes 'Exp' of type 'Expr'
+    eval vrs (Exp e)          = exp (eval vrs e) 
+
+    -- ^ Evaultes 'Ln' of type 'Expr'    
+    eval vrs (Ln e)           = log (eval vrs e) 
+
+    -- ^ Evaultes 'Neg' of type 'Expr'
+    eval vrs (Neg e)          = (-1) * (eval vrs e)      
+
+    -- ^ Evaultes 'Const' of type 'Expr'
+    eval vrs (Const x)        = x       
+
+    -- ^ Evaultes 'Var' of type 'Expr' 
+    eval vrs (Var x)          = case Map.lookup x vrs of  
                                         Just v  -> v
                                         Nothing -> error "failed lookup in eval"
 

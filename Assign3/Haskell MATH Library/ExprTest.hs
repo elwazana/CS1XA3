@@ -7,19 +7,14 @@
     Maintainer : elwazana@mcmaster.ca
     Stability : experimental
     Portability : POSIX
+    Depend : This module depends on the "ExprType","ExprDiff","ExprPretty","ExprParser" modules
 -}
 module ExprTest where
 
--- | This module depends on the "ExprDiff" module
+-- This module depends on "ExprDiff","ExprParser","ExprPretty","ExprType" modules
 import ExprDiff
-
--- | This module depends on the "ExprParser" module
 import ExprParser
-
--- | This module depends on the "ExprPretty" module
 import ExprPretty
-
--- | This module depends on the "ExprType" module
 import ExprType
 
 import qualified Data.Map.Strict as Map

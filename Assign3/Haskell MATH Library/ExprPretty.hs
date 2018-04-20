@@ -8,11 +8,12 @@
     Maintainer : elwazana@mcmaster.ca
     Stability : experimental
     Portability : POSIX
+    Depend : This module depends on the "ExprType" module
 -}
 
 module ExprPretty where
 
--- | This module depends on the "ExprType" module
+-- This module depends on the "ExprType" module
 import ExprType
 
 parens :: String -> String

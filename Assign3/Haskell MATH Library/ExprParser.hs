@@ -7,11 +7,12 @@
     Maintainer : elwazana@mcmaster.ca
     Stability : experimental
     Portability : POSIX
+    Depend : This module depends on the "ExprType" module
 -}
 
 module ExprParser (parseExprD,parseExprF) where
 
--- | This module depends on the "ExprType" module
+-- This module depends on the "ExprType" module
 import ExprType
 
 import Text.Parsec
