@@ -5,7 +5,7 @@
 * This Haskell Math Library is capable of the following operations:
 	1. Basic binary Addition (Add)
 	2. Basic binary Multiplication (Mult)
-	3. Cosine (Cos), Sine (Sin), Natural log (Ln)
+	3. Cosine (Cos), Sine (Sin), Natural log (Ln) -- Idea to use ln: https://github.com/barskyn/CS1XA3/blob/master/Assign3/assign3/ExprType.hs
 	4. Natural exponentiation (Exp)
 	5. Variables (Var)
 	6. Constants (Const)
@@ -14,6 +14,7 @@
 	1. Can partially evaluate an expression
 	2. Can perform partial diferrentiation (symbolically)
 	3. Can perform some/partial simplification of expressions
+		* Idea for how to format simplify from: https://github.com/chenc118/CS1XA3/blob/master/Assign3/ExprDiff.hs
 	4. Can parse certain strings into an expression datatype 
 
 ### Additional Features 
