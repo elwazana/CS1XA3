@@ -47,7 +47,8 @@ import qualified Data.Map.Strict as Map
                    and its value, and uses that value as the intial guess
                    in an attempt to execute newtons method for finding 
                    possible roots
-                   Note : 
+                   Note : Beware of using an expression with a partDiff of
+		          Const 0
  - Default Methods
  -      !+, !*, var, val, myCos, mySin, myExp, myLn : are function wrappers for 
  -      Expr constructors that performs additional simplifications
